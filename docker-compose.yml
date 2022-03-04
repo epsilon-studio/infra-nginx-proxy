@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  proxy:
+    image: nginx:latest
+    ports:
+      - "80:80"
+    volumes:
+      - ./proxy/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./proxy/conf.d/default.conf:/etc/nginx/conf.d/default.conf:ro
+    environment:
+      VIRTUAL_HOST: www.epsilon-studio.com
+      LETSENCRYPT_HOST: www.epsilon-studio.com
+      LETSENCRYPT_EMAIL: certificate@epsilon-studio.com
+    networks:
+      - default
+
+networks:
+  default:
+    external:
+      name: net-public
