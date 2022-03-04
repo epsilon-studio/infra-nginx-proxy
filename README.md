@@ -1,3 +1,9 @@
+<br/>
+<center>
+<img align="center" width="100%" src="assets/nginx-epsilon-min.png"> 
+</center>
+<br/>
+
 # Nginx Proxy
 
 Implementacion de un sencillo proxy para aplicaciones web.
@@ -20,6 +26,6 @@ Esto es bien comun cuando se tiene un solo dominio web, las direcciones quedan d
 
 Este escenario es comun cuando se tiene un solo servicio expuesto por internet, pero los demas servicios no se desean exponer directamente.
 
-**Copyright**
+### Copyright
 
 [Nginx , Docker office image ](https://hub.docker.com/_/nginx)
